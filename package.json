@@ -1,0 +1,36 @@
+{
+  "name": "pullgit",
+  "version": "1.0.0",
+  "description": "Automatic GitHub repository sync and deployment management tool for VPS",
+  "main": "src/index.js",
+  "bin": {
+    "pullgit": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "dev": "node bin/cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "github",
+    "deployment",
+    "vps",
+    "sync",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "octokit": "^3.1.0",
+    "simple-git": "^3.22.0",
+    "inquirer": "^8.2.5",
+    "node-cron": "^3.0.3",
+    "dotenv": "^16.3.1",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "axios": "^1.6.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
