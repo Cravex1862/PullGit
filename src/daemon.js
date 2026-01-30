@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * PullGit Scheduler Service
+ * GitDeploy Scheduler Service
  * Run this to keep auto-sync running in the background on your VPS
  * 
  * Usage:
@@ -16,14 +16,14 @@ const chalk = require('chalk');
 const fs = require('fs');
 const path = require('path');
 
-const PID_FILE = path.join(configManager.getConfigDir(), 'pullgit.pid');
+const PID_FILE = path.join(configManager.getConfigDir(), 'gitdeploy.pid');
 
 class Daemon {
   start() {
     try {
       // Check if already running
       if (this.isRunning()) {
-        console.log(chalk.yellow('\n⚠️  PullGit daemon is already running\n'));
+        console.log(chalk.yellow('\n⚠️  GitDeploy daemon is already running\n'));
         return;
       }
 
@@ -33,7 +33,7 @@ class Daemon {
       // Start scheduler
       scheduler.start();
 
-      console.log(chalk.green('\n✅ PullGit daemon started\n'));
+      console.log(chalk.green('\n✅ GitDeploy daemon started\n'));
       console.log(chalk.cyan('Auto-sync scheduler is now running in the background'));
       console.log(chalk.gray(`Log file: ${scheduler.logFile}\n`));
 
@@ -54,7 +54,7 @@ class Daemon {
         fs.unlinkSync(PID_FILE);
       }
 
-      console.log(chalk.green('\n✅ PullGit daemon stopped\n'));
+      console.log(chalk.green('\n✅ GitDeploy daemon stopped\n'));
       process.exit(0);
     } catch (error) {
       console.error(chalk.red(`\n❌ Failed to stop daemon: ${error.message}\n`));
@@ -85,11 +85,11 @@ class Daemon {
 
   status() {
     if (this.isRunning()) {
-      console.log(chalk.green('\n✅ PullGit daemon is running\n'));
+      console.log(chalk.green('\n✅ GitDeploy daemon is running\n'));
       console.log(chalk.cyan('Recent logs:\n'));
       console.log(scheduler.getLog());
     } else {
-      console.log(chalk.yellow('\n⊘ PullGit daemon is not running\n'));
+      console.log(chalk.yellow('\n⊘ GitDeploy daemon is not running\n'));
     }
   }
 }

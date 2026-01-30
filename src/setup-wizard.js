@@ -10,7 +10,7 @@ const path = require('path');
 class SetupWizard {
   async run() {
     try {
-      console.log(chalk.cyan('\n📋 Welcome to PullGit Setup Wizard\n'));
+      console.log(chalk.cyan('\n📋 Welcome to GitDeploy Setup Wizard\n'));
       
       // Step 1: GitHub Token (Optional for public repos)
       await this.setupGithubAuth();
@@ -23,9 +23,9 @@ class SetupWizard {
       
       console.log(chalk.green('\n✅ Setup complete! Your configuration is ready.\n'));
       console.log(chalk.cyan('Next steps:'));
-      console.log(chalk.white('  • Run: pullgit list    - to see your repositories'));
-      console.log(chalk.white('  • Run: pullgit sync    - to manually sync repositories'));
-      console.log(chalk.white('  • Run: pullgit help    - for more commands\n'));
+      console.log(chalk.white('  • Run: gitdeploy list    - to see your repositories'));
+      console.log(chalk.white('  • Run: gitdeploy sync    - to manually sync repositories'));
+      console.log(chalk.white('  • Run: gitdeploy help    - for more commands\n'));
     } catch (error) {
       throw error;
     }
@@ -128,7 +128,7 @@ class SetupWizard {
 
     const repos = configManager.getRepositories();
     if (repos.length === 0) {
-      console.log(chalk.yellow('\n⚠️  No repositories added. You can add them later with: pullgit add\n'));
+      console.log(chalk.yellow('\n⚠️  No repositories added. You can add them later with: gitdeploy add\n'));
     }
   }
 
@@ -212,7 +212,7 @@ class SetupWizard {
     if (autoSync) {
       console.log(chalk.green('✓ Auto-sync enabled'));
     } else {
-      console.log(chalk.green('✓ Auto-sync disabled (use "pullgit sync" to sync manually)'));
+      console.log(chalk.green('✓ Auto-sync disabled (use "gitdeploy sync" to sync manually)'));
     }
   }
 }

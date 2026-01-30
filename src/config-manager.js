@@ -3,12 +3,12 @@ const path = require('path');
 const crypto = require('crypto');
 const os = require('os');
 
-const CONFIG_DIR = path.join(os.homedir(), '.pullgit');
+const CONFIG_DIR = path.join(os.homedir(), '.gitdeploy');
 const CONFIG_FILE = path.join(CONFIG_DIR, 'config.json');
 const REPOS_DIR = path.join(CONFIG_DIR, 'repositories');
 
 // Encryption key for storing tokens (using a static key - in production, use better method)
-const ENCRYPTION_KEY = 'pullgit-secure-key-2026';
+const ENCRYPTION_KEY = 'gitdeploy-secure-key-2026';
 
 class ConfigManager {
   constructor() {

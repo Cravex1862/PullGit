@@ -10,4 +10,4 @@ build/
 *.swp
 *.swo
 *~
-.pullgit/
+.gitdeploy/

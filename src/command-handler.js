@@ -44,7 +44,7 @@ class CommandHandler {
         break;
       default:
         console.log(chalk.red(`Unknown command: ${command}`));
-        console.log(chalk.white('Run "pullgit help" for available commands'));
+        console.log(chalk.white('Run "gitdeploy help" for available commands'));
     }
   }
 
@@ -77,29 +77,29 @@ class CommandHandler {
   }
 
   showHelp() {
-    console.log(chalk.cyan.bold('\n📚 PullGit Commands\n'));
+    console.log(chalk.cyan.bold('\n📚 GitDeploy Commands\n'));
     console.log(chalk.white('Setup & Configuration:'));
-    console.log(chalk.gray('  pullgit setup           Start the setup wizard'));
-    console.log(chalk.gray('  pullgit add             Add a new repository'));
-    console.log(chalk.gray('  pullgit remove          Remove a repository'));
-    console.log(chalk.gray('  pullgit config          Show current configuration\n'));
+    console.log(chalk.gray('  gitdeploy setup           Start the setup wizard'));
+    console.log(chalk.gray('  gitdeploy add             Add a new repository'));
+    console.log(chalk.gray('  gitdeploy remove          Remove a repository'));
+    console.log(chalk.gray('  gitdeploy config          Show current configuration\n'));
     
     console.log(chalk.white('Repository Management:'));
-    console.log(chalk.gray('  pullgit list            List all repositories'));
-    console.log(chalk.gray('  pullgit sync            Manually sync all repositories'));
-    console.log(chalk.gray('  pullgit sync [name]     Sync specific repository'));
-    console.log(chalk.gray('  pullgit status          Show sync status\n'));
+    console.log(chalk.gray('  gitdeploy list            List all repositories'));
+    console.log(chalk.gray('  gitdeploy sync            Manually sync all repositories'));
+    console.log(chalk.gray('  gitdeploy sync [name]     Sync specific repository'));
+    console.log(chalk.gray('  gitdeploy status          Show sync status\n'));
     
     console.log(chalk.white('Deployment:'));
-    console.log(chalk.gray('  pullgit deploy [name]   Deploy a repository'));
-    console.log(chalk.gray('  pullgit help            Show this help message\n'));
+    console.log(chalk.gray('  gitdeploy deploy [name]   Deploy a repository'));
+    console.log(chalk.gray('  gitdeploy help            Show this help message\n'));
   }
 
   listRepositories() {
     const repos = configManager.getRepositories();
     
     if (repos.length === 0) {
-      console.log(chalk.yellow('\nNo repositories configured. Run "pullgit add" to add one.\n'));
+      console.log(chalk.yellow('\nNo repositories configured. Run "gitdeploy add" to add one.\n'));
       return;
     }
 

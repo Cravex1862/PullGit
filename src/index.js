@@ -1,5 +1,5 @@
 /**
- * PullGit - Main Entry Point
+ * GitDeploy - Main Entry Point
  * This file can be used as the main module for programmatic access
  */
 

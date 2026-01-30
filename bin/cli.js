@@ -11,7 +11,7 @@ async function main() {
   try {
     // Show welcome banner
     console.log(chalk.cyan.bold('\n╔════════════════════════════════════╗'));
-    console.log(chalk.cyan.bold('║        PullGit - Auto Sync Tool      ║'));
+    console.log(chalk.cyan.bold('║       GitDeploy - Auto Sync Tool     ║'));
     console.log(chalk.cyan.bold('╚════════════════════════════════════╝\n'));
 
     // Check if config exists

@@ -1,12 +1,12 @@
-# 🚀 PullGit - Automatic GitHub Repository Sync & Deployment
+# ðŸš€ GitDeploy - Automatic GitHub Repository Sync & Deployment
 
 **Automatically sync and deploy your GitHub repositories to any VPS with zero hassle.**
 
-PullGit watches your GitHub repos, pulls updates automatically, and deploys them to your server. Perfect for small teams, side projects, and developers who want simple automation.
+GitDeploy watches your GitHub repos, pulls updates automatically, and deploys them to your server. Perfect for small teams, side projects, and developers who want simple automation.
 
 ---
 
-## ⚡ Quick Overview
+## âš¡ Quick Overview
 
 ```bash
 npm install        # Install
@@ -15,12 +15,12 @@ npm start          # Setup wizard
 ```
 
 **What it does:**
-- 🔄 Automatically syncs your GitHub repos
-- 🚀 Deploys to your VPS
-- 🔒 Works with private repos
-- ⏰ Scheduled updates (every 5 min, 1 hour, etc.)
-- 📦 Supports Node.js, Python Flask, Static sites
-- 🎛️ Background daemon keeps it running
+- ðŸ”„ Automatically syncs your GitHub repos
+- ðŸš€ Deploys to your VPS
+- ðŸ”’ Works with private repos
+- â° Scheduled updates (every 5 min, 1 hour, etc.)
+- ðŸ“¦ Supports Node.js, Python Flask, Static sites
+- ðŸŽ›ï¸ Background daemon keeps it running
 
 **What you need:**
 - Node.js 14+
@@ -29,7 +29,7 @@ npm start          # Setup wizard
 
 ---
 
-## 📋 Table of Contents
+## ðŸ“‹ Table of Contents
 
 1. [Installation](#-step-1-installation)
 2. [Setup Wizard](#-step-2-setup-wizard)
@@ -41,7 +41,7 @@ npm start          # Setup wizard
 
 ---
 
-## 📦 STEP 1: Installation
+## ðŸ“¦ STEP 1: Installation
 
 ### On Your Local Machine (Testing)
 
@@ -71,12 +71,12 @@ node --version  # Should show v18.x.x or higher
 npm --version   # Should show 8.x.x or higher
 ```
 
-### Download PullGit
+### Download gitdeploy
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/pullgit.git
-cd pullgit
+git clone https://github.com/yourusername/gitdeploy.git
+cd gitdeploy
 
 # Install dependencies (takes 1-2 minutes)
 npm install
@@ -87,19 +87,19 @@ node bin/cli.js help
 
 You should see:
 ```
-╔════════════════════════════════════╗
-║        PullGit - Auto Sync Tool      ║
-╚════════════════════════════════════╝
+â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—
+â•‘        gitdeploy - Auto Sync Tool      â•‘
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
-📚 PullGit Commands
+ðŸ“š gitdeploy Commands
 ...
 ```
 
-✅ **Installation complete!** Continue to Step 2.
+âœ… **Installation complete!** Continue to Step 2.
 
 ---
 
-## 🎯 STEP 2: Setup Wizard
+## ðŸŽ¯ STEP 2: Setup Wizard
 
 Run the interactive setup wizard:
 
@@ -128,7 +128,7 @@ You'll be asked a series of questions. Here's what to expect:
 You'll see instructions:
 
 ```
-📖 Getting your Personal Access Token:
+ðŸ“– Getting your Personal Access Token:
 
 1. Go to: https://github.com/settings/tokens
 2. Click "Generate new token" (classic)
@@ -144,21 +144,21 @@ You'll see instructions:
 
 2. **Click the "Generate new token" button** (choose "classic")
 
-3. **Give it a name:** Type "PullGit" in the Note field
+3. **Give it a name:** Type "gitdeploy" in the Note field
 
 4. **Select permissions** - Check these boxes:
-   - ☑ **repo** (This will check all sub-items)
+   - â˜‘ **repo** (This will check all sub-items)
      - repo:status
      - repo_deployment
      - public_repo
      - repo:invite
      - security_events
-   - ☑ **read:user**
+   - â˜‘ **read:user**
 
 5. **Scroll down and click "Generate token"**
 
 6. **Copy the token** - It looks like: `ghp_xxxxxxxxxxxxxxxxxxxx`
-   ⚠️ You won't see it again, so copy it now!
+   âš ï¸ You won't see it again, so copy it now!
 
 7. **Go back to your terminal** and paste the token
 
@@ -166,7 +166,7 @@ You'll see instructions:
 
 You should see:
 ```
-✓ Token saved for user: your-github-username
+âœ“ Token saved for user: your-github-username
 ```
 
 ---
@@ -198,7 +198,7 @@ Examples:
 
 ```
 ? How should we deploy "your-repo"?
-❯ Node.js + Nginx - Node.js application served by Nginx reverse proxy
+â¯ Node.js + Nginx - Node.js application served by Nginx reverse proxy
   Static + Apache - HTML/CSS/JS served by Apache HTTP Server
   Node.js + PM2 - Node.js application with PM2 process manager
   Python Flask + Nginx - Python Flask application with Nginx and Gunicorn
@@ -224,7 +224,7 @@ Examples:
 
 ```
 ? How often should we check for updates?
-❯ Every 5 minutes
+â¯ Every 5 minutes
   Every 15 minutes
   Every 30 minutes
   Every hour
@@ -246,29 +246,29 @@ Examples:
 ```
 
 **Answer:**
-- `Y` - PullGit will automatically check GitHub and pull changes
+- `Y` - gitdeploy will automatically check GitHub and pull changes
 - `N` - You'll manually run sync with `node bin/cli.js sync`
 
 ---
 
-### ✅ Setup Complete!
+### âœ… Setup Complete!
 
 ```
-✅ Setup complete! Your configuration is ready.
+âœ… Setup complete! Your configuration is ready.
 
 Next steps:
-  • Run: pullgit list    - to see your repositories
-  • Run: pullgit sync    - to manually sync repositories
-  • Run: pullgit help    - for more commands
+  â€¢ Run: gitdeploy list    - to see your repositories
+  â€¢ Run: gitdeploy sync    - to manually sync repositories
+  â€¢ Run: gitdeploy help    - for more commands
 ```
 
 **Your configuration is saved in:**
-- Linux/Mac: `~/.pullgit/config.json`
-- Windows: `C:\Users\YourName\.pullgit\config.json`
+- Linux/Mac: `~/.gitdeploy/config.json`
+- Windows: `C:\Users\YourName\.gitdeploy\config.json`
 
 ---
 
-## 🌐 STEP 3: Using on Your VPS
+## ðŸŒ STEP 3: Using on Your VPS
 
 ### A. Connect to Your VPS
 
@@ -280,16 +280,16 @@ ssh root@192.168.1.100
 ssh ubuntu@myserver.com
 ```
 
-### B. Install PullGit (repeat Step 1 on VPS)
+### B. Install gitdeploy (repeat Step 1 on VPS)
 
 ```bash
 # Install Node.js
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt-get install -y nodejs git
 
-# Clone PullGit
-git clone https://github.com/yourusername/pullgit.git
-cd pullgit
+# Clone gitdeploy
+git clone https://github.com/yourusername/gitdeploy.git
+cd gitdeploy
 
 # Install dependencies
 npm install
@@ -312,14 +312,14 @@ node bin/cli.js sync
 
 You should see:
 ```
-🔄 Starting sync of 1 repository(ies)...
+ðŸ”„ Starting sync of 1 repository(ies)...
 
-→ Cloning your-repo...
-Repository cloned to ~/.pullgit/repositories/your-repo
-✅ Sync completed!
+â†’ Cloning your-repo...
+Repository cloned to ~/.gitdeploy/repositories/your-repo
+âœ… Sync completed!
 ```
 
-Your repository is now in: `~/.pullgit/repositories/your-repo-name/`
+Your repository is now in: `~/.gitdeploy/repositories/your-repo-name/`
 
 ### E. Deploy Your Application
 
@@ -331,24 +331,24 @@ node bin/cli.js deploy your-repo-name
 This will show you a deployment script. Example output:
 
 ```bash
-🚀 Deploying your-repo
+ðŸš€ Deploying your-repo
 
 Deployment Type: Node.js + Nginx
-Repository Path: /home/user/.pullgit/repositories/your-repo
+Repository Path: /home/user/.gitdeploy/repositories/your-repo
 Requirements: Node.js, npm, Nginx
 
 ? Continue with deployment? Yes
 
 Setup script for your VPS:
 
-──────────────────────────────────────────────────
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 #!/bin/bash
 # Node.js + Nginx Setup Script
 ...
-──────────────────────────────────────────────────
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 Run the above script on your VPS with:
-bash script.sh your-repo /home/user/.pullgit/repositories/your-repo
+bash script.sh your-repo /home/user/.gitdeploy/repositories/your-repo
 ```
 
 **To deploy:**
@@ -371,7 +371,7 @@ bash script.sh your-repo /home/user/.pullgit/repositories/your-repo
 
 5. **Run it:**
    ```bash
-   sudo bash deploy.sh your-repo-name ~/.pullgit/repositories/your-repo-name
+   sudo bash deploy.sh your-repo-name ~/.gitdeploy/repositories/your-repo-name
    ```
 
 6. **Wait for it to complete** (2-5 minutes)
@@ -391,13 +391,13 @@ node src/daemon.js start
 
 You should see:
 ```
-✅ PullGit daemon started
+âœ… gitdeploy daemon started
 
 Auto-sync scheduler is now running in the background
-Log file: ~/.pullgit/sync.log
+Log file: ~/.gitdeploy/sync.log
 ```
 
-Now PullGit will automatically check for updates and pull changes!
+Now gitdeploy will automatically check for updates and pull changes!
 
 ### G. Verify Everything is Running
 
@@ -406,7 +406,7 @@ Now PullGit will automatically check for updates and pull changes!
 node src/daemon.js status
 
 # View recent sync logs
-tail -f ~/.pullgit/sync.log
+tail -f ~/.gitdeploy/sync.log
 
 # List all repositories
 node bin/cli.js list
@@ -417,7 +417,7 @@ node bin/cli.js status
 
 ---
 
-## 💻 Commands Reference
+## ðŸ’» Commands Reference
 
 ### Repository Management
 
@@ -484,15 +484,15 @@ node src/daemon.js stop
 
 ```bash
 # View sync logs
-cat ~/.pullgit/sync.log
+cat ~/.gitdeploy/sync.log
 
 # Watch logs in real-time
-tail -f ~/.pullgit/sync.log
+tail -f ~/.gitdeploy/sync.log
 ```
 
 ---
 
-## 🚀 Deployment Types
+## ðŸš€ Deployment Types
 
 ### 1. Node.js + Nginx
 
@@ -578,7 +578,7 @@ tail -f ~/.pullgit/sync.log
 
 ---
 
-## 🔧 Troubleshooting
+## ðŸ”§ Troubleshooting
 
 ### Installation Issues
 
@@ -657,13 +657,13 @@ npm install
 **Solution:**
 ```bash
 # Check logs
-cat ~/.pullgit/sync.log
+cat ~/.gitdeploy/sync.log
 
 # Try manual sync with specific repo
 node bin/cli.js sync repo-name
 
 # Check git status manually
-cd ~/.pullgit/repositories/repo-name
+cd ~/.gitdeploy/repositories/repo-name
 git status
 git pull
 ```
@@ -674,8 +674,8 @@ git pull
 
 **Solution:** Use HTTPS URLs, not SSH URLs
 ```
-✅ https://github.com/user/repo.git
-❌ git@github.com:user/repo.git
+âœ… https://github.com/user/repo.git
+âŒ git@github.com:user/repo.git
 ```
 
 ---
@@ -738,10 +738,10 @@ sudo systemctl restart nginx
 **Solution:**
 ```bash
 # Check if already running
-ps aux | grep pullgit
+ps aux | grep gitdeploy
 
 # Check logs
-cat ~/.pullgit/sync.log
+cat ~/.gitdeploy/sync.log
 
 # Kill existing process and restart
 pkill -f daemon.js
@@ -759,20 +759,20 @@ node src/daemon.js start
 nohup node src/daemon.js start > /dev/null 2>&1 &
 
 # Better: Create systemd service
-sudo nano /etc/systemd/system/pullgit.service
+sudo nano /etc/systemd/system/gitdeploy.service
 ```
 
 Add:
 ```ini
 [Unit]
-Description=PullGit Auto-Sync Daemon
+Description=gitdeploy Auto-Sync Daemon
 After=network.target
 
 [Service]
 Type=simple
 User=yourusername
-WorkingDirectory=/path/to/pullgit
-ExecStart=/usr/bin/node /path/to/pullgit/src/daemon.js start
+WorkingDirectory=/path/to/gitdeploy
+ExecStart=/usr/bin/node /path/to/gitdeploy/src/daemon.js start
 Restart=always
 
 [Install]
@@ -782,20 +782,20 @@ WantedBy=multi-user.target
 Then:
 ```bash
 sudo systemctl daemon-reload
-sudo systemctl enable pullgit
-sudo systemctl start pullgit
-sudo systemctl status pullgit
+sudo systemctl enable gitdeploy
+sudo systemctl start gitdeploy
+sudo systemctl status gitdeploy
 ```
 
 ---
 
-## ❓ FAQ
+## â“ FAQ
 
 ### General
 
-**Q: Is PullGit free?**
+**Q: Is gitdeploy free?**
 
-A: Yes! PullGit is completely free and open-source.
+A: Yes! gitdeploy is completely free and open-source.
 
 ---
 
@@ -833,7 +833,7 @@ A: Yes! Add as many repositories as you want using `node bin/cli.js add`.
 
 **Q: How do I change settings later?**
 
-A: Run `npm start` again to reconfigure, or manually edit `~/.pullgit/config.json`.
+A: Run `npm start` again to reconfigure, or manually edit `~/.gitdeploy/config.json`.
 
 ---
 
@@ -847,7 +847,7 @@ A: Yes. Remove the repo (`node bin/cli.js remove`) and add it again with a diffe
 
 **Q: Where are my GitHub tokens stored?**
 
-A: Encrypted in `~/.pullgit/config.json`. Never committed to git.
+A: Encrypted in `~/.gitdeploy/config.json`. Never committed to git.
 
 ---
 
@@ -873,13 +873,13 @@ A: `node src/daemon.js stop`
 
 **Q: Can I see sync history?**
 
-A: Yes! `cat ~/.pullgit/sync.log` or `tail -f ~/.pullgit/sync.log` for real-time.
+A: Yes! `cat ~/.gitdeploy/sync.log` or `tail -f ~/.gitdeploy/sync.log` for real-time.
 
 ---
 
-**Q: How do I update PullGit?**
+**Q: How do I update gitdeploy?**
 
-A: `cd pullgit && git pull && npm install`
+A: `cd gitdeploy && git pull && npm install`
 
 ---
 
@@ -905,88 +905,89 @@ A: Node.js 14.0.0 or higher. Recommended: Node.js 18.x LTS.
 
 **Q: Can I contribute?**
 
-A: Yes! PullGit is open-source. Fork it, make improvements, submit a PR!
+A: Yes! gitdeploy is open-source. Fork it, make improvements, submit a PR!
 
 ---
 
-## 🎉 You're All Set!
+## ðŸŽ‰ You're All Set!
 
 **Quick recap:**
 
-1. ✅ Installed PullGit: `npm install`
-2. ✅ Ran setup wizard: `npm start`
-3. ✅ Deployed to VPS
-4. ✅ Started auto-sync: `node src/daemon.js start`
+1. âœ… Installed gitdeploy: `npm install`
+2. âœ… Ran setup wizard: `npm start`
+3. âœ… Deployed to VPS
+4. âœ… Started auto-sync: `node src/daemon.js start`
 
 **Your repositories will now automatically sync and deploy!**
 
 ### What Happens Next?
 
 1. You push code to GitHub
-2. PullGit detects the update (every X minutes)
+2. gitdeploy detects the update (every X minutes)
 3. Automatically pulls the latest code
 4. Your VPS has the latest version
 5. Your app/site is updated
 
-**All without you doing anything!** 🎊
+**All without you doing anything!** ðŸŽŠ
 
 ---
 
-## 📚 Additional Information
+## ðŸ“š Additional Information
 
 ### Project Structure
 
 ```
-pullgit/
-├── bin/
-│   └── cli.js              # Main CLI entry
-├── src/
-│   ├── config-manager.js   # Configuration
-│   ├── github-auth.js      # GitHub API
-│   ├── sync-engine.js      # Git operations
-│   ├── deployment-manager.js # Deployments
-│   ├── setup-wizard.js     # Setup wizard
-│   ├── command-handler.js  # CLI commands
-│   ├── sync-scheduler.js   # Auto-sync
-│   └── daemon.js           # Background service
-├── deployments/            # Deployment scripts
-│   ├── nodejs-nginx-setup.sh
-│   ├── nodejs-pm2-setup.sh
-│   ├── python-flask-setup.sh
-│   ├── static-apache-setup.sh
-│   └── static-nginx-setup.sh
-└── package.json            # Dependencies
+gitdeploy/
+â”œâ”€â”€ bin/
+â”‚   â””â”€â”€ cli.js              # Main CLI entry
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ config-manager.js   # Configuration
+â”‚   â”œâ”€â”€ github-auth.js      # GitHub API
+â”‚   â”œâ”€â”€ sync-engine.js      # Git operations
+â”‚   â”œâ”€â”€ deployment-manager.js # Deployments
+â”‚   â”œâ”€â”€ setup-wizard.js     # Setup wizard
+â”‚   â”œâ”€â”€ command-handler.js  # CLI commands
+â”‚   â”œâ”€â”€ sync-scheduler.js   # Auto-sync
+â”‚   â””â”€â”€ daemon.js           # Background service
+â”œâ”€â”€ deployments/            # Deployment scripts
+â”‚   â”œâ”€â”€ nodejs-nginx-setup.sh
+â”‚   â”œâ”€â”€ nodejs-pm2-setup.sh
+â”‚   â”œâ”€â”€ python-flask-setup.sh
+â”‚   â”œâ”€â”€ static-apache-setup.sh
+â”‚   â””â”€â”€ static-nginx-setup.sh
+â””â”€â”€ package.json            # Dependencies
 ```
 
 ### Configuration File Location
 
-**Linux/Mac:** `~/.pullgit/config.json`
-**Windows:** `C:\Users\YourName\.pullgit\config.json`
+**Linux/Mac:** `~/.gitdeploy/config.json`
+**Windows:** `C:\Users\YourName\.gitdeploy\config.json`
 
 ### Repository Storage
 
-**Linux/Mac:** `~/.pullgit/repositories/`
-**Windows:** `C:\Users\YourName\.pullgit\repositories\`
+**Linux/Mac:** `~/.gitdeploy/repositories/`
+**Windows:** `C:\Users\YourName\.gitdeploy\repositories\`
 
 ---
 
-## 📄 License
+## ðŸ“„ License
 
 MIT License
 
 ---
 
-## 🌟 Support
+## ðŸŒŸ Support
 
-If you find PullGit useful:
-- ⭐ Star the repo on GitHub
-- 🐛 Report issues
-- 💡 Suggest features
-- 🤝 Contribute code
+If you find gitdeploy useful:
+- â­ Star the repo on GitHub
+- ðŸ› Report issues
+- ðŸ’¡ Suggest features
+- ðŸ¤ Contribute code
 
 ---
 
-**Happy deploying! 🚀**
+**Happy deploying! ðŸš€**
 
-Made with ❤️ for developers who want simple, automated deployments.
+Made with â¤ï¸ for developers who want simple, automated deployments.
+
 
