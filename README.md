@@ -1,4 +1,4 @@
-# ðŸš€ GitDeploy - Automatic GitHub Repository Sync & Deployment
+# 🚀 GitDeploy - Automatic GitHub Repository Sync & Deployment
 
 **Automatically sync and deploy your GitHub repositories to any VPS with zero hassle.**
 
@@ -6,7 +6,7 @@ GitDeploy watches your GitHub repos, pulls updates automatically, and deploys th
 
 ---
 
-## âš¡ Quick Overview
+## ⚡ Quick Overview
 
 ```bash
 npm install        # Install
@@ -15,12 +15,12 @@ npm start          # Setup wizard
 ```
 
 **What it does:**
-- ðŸ”„ Automatically syncs your GitHub repos
-- ðŸš€ Deploys to your VPS
-- ðŸ”’ Works with private repos
-- â° Scheduled updates (every 5 min, 1 hour, etc.)
-- ðŸ“¦ Supports Node.js, Python Flask, Static sites
-- ðŸŽ›ï¸ Background daemon keeps it running
+- 🔄 Automatically syncs your GitHub repos
+- 🚀 Deploys to your VPS
+- 🔒 Works with private repos
+- ⏰ Scheduled updates (every 5 min, 1 hour, etc.)
+- 📦 Supports Node.js, Python Flask, Static sites
+- 🎛️ Background daemon keeps it running
 
 **What you need:**
 - Node.js 14+
@@ -29,7 +29,7 @@ npm start          # Setup wizard
 
 ---
 
-## ðŸ“‹ Table of Contents
+## 📋 Table of Contents
 
 1. [Installation](#-step-1-installation)
 2. [Setup Wizard](#-step-2-setup-wizard)
@@ -41,7 +41,7 @@ npm start          # Setup wizard
 
 ---
 
-## ðŸ“¦ STEP 1: Installation
+## 📦 STEP 1: Installation
 
 ### On Your Local Machine (Testing)
 
@@ -71,7 +71,7 @@ node --version  # Should show v18.x.x or higher
 npm --version   # Should show 8.x.x or higher
 ```
 
-### Download gitdeploy
+### Download GitDeploy
 
 ```bash
 # Clone the repository
@@ -87,19 +87,19 @@ node bin/cli.js help
 
 You should see:
 ```
-â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—
-â•‘        gitdeploy - Auto Sync Tool      â•‘
-â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+╔════════════════════════════════════╗
+║       GitDeploy - Auto Sync Tool     ║
+╚════════════════════════════════════╝
 
-ðŸ“š gitdeploy Commands
+📚 GitDeploy Commands
 ...
 ```
 
-âœ… **Installation complete!** Continue to Step 2.
+✅ **Installation complete!** Continue to Step 2.
 
 ---
 
-## ðŸŽ¯ STEP 2: Setup Wizard
+## 🎯 STEP 2: Setup Wizard
 
 Run the interactive setup wizard:
 
@@ -128,7 +128,7 @@ You'll be asked a series of questions. Here's what to expect:
 You'll see instructions:
 
 ```
-ðŸ“– Getting your Personal Access Token:
+📖 Getting your Personal Access Token:
 
 1. Go to: https://github.com/settings/tokens
 2. Click "Generate new token" (classic)
@@ -144,21 +144,21 @@ You'll see instructions:
 
 2. **Click the "Generate new token" button** (choose "classic")
 
-3. **Give it a name:** Type "gitdeploy" in the Note field
+3. **Give it a name:** Type "GitDeploy" in the Note field
 
 4. **Select permissions** - Check these boxes:
-   - â˜‘ **repo** (This will check all sub-items)
+   - ☑ **repo** (This will check all sub-items)
      - repo:status
      - repo_deployment
      - public_repo
      - repo:invite
      - security_events
-   - â˜‘ **read:user**
+   - ☑ **read:user**
 
 5. **Scroll down and click "Generate token"**
 
 6. **Copy the token** - It looks like: `ghp_xxxxxxxxxxxxxxxxxxxx`
-   âš ï¸ You won't see it again, so copy it now!
+   ⚠️ You won't see it again, so copy it now!
 
 7. **Go back to your terminal** and paste the token
 
@@ -166,7 +166,7 @@ You'll see instructions:
 
 You should see:
 ```
-âœ“ Token saved for user: your-github-username
+✓ Token saved for user: your-github-username
 ```
 
 ---
@@ -198,7 +198,7 @@ Examples:
 
 ```
 ? How should we deploy "your-repo"?
-â¯ Node.js + Nginx - Node.js application served by Nginx reverse proxy
+❯ Node.js + Nginx - Node.js application served by Nginx reverse proxy
   Static + Apache - HTML/CSS/JS served by Apache HTTP Server
   Node.js + PM2 - Node.js application with PM2 process manager
   Python Flask + Nginx - Python Flask application with Nginx and Gunicorn
@@ -224,7 +224,7 @@ Examples:
 
 ```
 ? How often should we check for updates?
-â¯ Every 5 minutes
+❯ Every 5 minutes
   Every 15 minutes
   Every 30 minutes
   Every hour
@@ -246,20 +246,20 @@ Examples:
 ```
 
 **Answer:**
-- `Y` - gitdeploy will automatically check GitHub and pull changes
+- `Y` - GitDeploy will automatically check GitHub and pull changes
 - `N` - You'll manually run sync with `node bin/cli.js sync`
 
 ---
 
-### âœ… Setup Complete!
+### ✅ Setup Complete!
 
 ```
-âœ… Setup complete! Your configuration is ready.
+✅ Setup complete! Your configuration is ready.
 
 Next steps:
-  â€¢ Run: gitdeploy list    - to see your repositories
-  â€¢ Run: gitdeploy sync    - to manually sync repositories
-  â€¢ Run: gitdeploy help    - for more commands
+  • Run: gitdeploy list    - to see your repositories
+  • Run: gitdeploy sync    - to manually sync repositories
+  • Run: gitdeploy help    - for more commands
 ```
 
 **Your configuration is saved in:**
@@ -268,7 +268,7 @@ Next steps:
 
 ---
 
-## ðŸŒ STEP 3: Using on Your VPS
+## 🌐 STEP 3: Using on Your VPS
 
 ### A. Connect to Your VPS
 
@@ -280,14 +280,14 @@ ssh root@192.168.1.100
 ssh ubuntu@myserver.com
 ```
 
-### B. Install gitdeploy (repeat Step 1 on VPS)
+### B. Install GitDeploy (repeat Step 1 on VPS)
 
 ```bash
 # Install Node.js
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt-get install -y nodejs git
 
-# Clone gitdeploy
+# Clone GitDeploy
 git clone https://github.com/yourusername/gitdeploy.git
 cd gitdeploy
 
@@ -312,11 +312,11 @@ node bin/cli.js sync
 
 You should see:
 ```
-ðŸ”„ Starting sync of 1 repository(ies)...
+🔄 Starting sync of 1 repository(ies)...
 
-â†’ Cloning your-repo...
+→ Cloning your-repo...
 Repository cloned to ~/.gitdeploy/repositories/your-repo
-âœ… Sync completed!
+✅ Sync completed!
 ```
 
 Your repository is now in: `~/.gitdeploy/repositories/your-repo-name/`
@@ -331,7 +331,7 @@ node bin/cli.js deploy your-repo-name
 This will show you a deployment script. Example output:
 
 ```bash
-ðŸš€ Deploying your-repo
+🚀 Deploying your-repo
 
 Deployment Type: Node.js + Nginx
 Repository Path: /home/user/.gitdeploy/repositories/your-repo
@@ -341,11 +341,11 @@ Requirements: Node.js, npm, Nginx
 
 Setup script for your VPS:
 
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+──────────────────────────────────────────────────
 #!/bin/bash
 # Node.js + Nginx Setup Script
 ...
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+──────────────────────────────────────────────────
 
 Run the above script on your VPS with:
 bash script.sh your-repo /home/user/.gitdeploy/repositories/your-repo
@@ -391,13 +391,13 @@ node src/daemon.js start
 
 You should see:
 ```
-âœ… gitdeploy daemon started
+✅ GitDeploy daemon started
 
 Auto-sync scheduler is now running in the background
 Log file: ~/.gitdeploy/sync.log
 ```
 
-Now gitdeploy will automatically check for updates and pull changes!
+Now GitDeploy will automatically check for updates and pull changes!
 
 ### G. Verify Everything is Running
 
@@ -417,7 +417,7 @@ node bin/cli.js status
 
 ---
 
-## ðŸ’» Commands Reference
+## 💻 Commands Reference
 
 ### Repository Management
 
@@ -492,7 +492,7 @@ tail -f ~/.gitdeploy/sync.log
 
 ---
 
-## ðŸš€ Deployment Types
+## 🚀 Deployment Types
 
 ### 1. Node.js + Nginx
 
@@ -578,7 +578,7 @@ tail -f ~/.gitdeploy/sync.log
 
 ---
 
-## ðŸ”§ Troubleshooting
+## 🔧 Troubleshooting
 
 ### Installation Issues
 
@@ -674,8 +674,8 @@ git pull
 
 **Solution:** Use HTTPS URLs, not SSH URLs
 ```
-âœ… https://github.com/user/repo.git
-âŒ git@github.com:user/repo.git
+✅ https://github.com/user/repo.git
+❌ git@github.com:user/repo.git
 ```
 
 ---
@@ -765,7 +765,7 @@ sudo nano /etc/systemd/system/gitdeploy.service
 Add:
 ```ini
 [Unit]
-Description=gitdeploy Auto-Sync Daemon
+Description=GitDeploy Auto-Sync Daemon
 After=network.target
 
 [Service]
@@ -789,13 +789,13 @@ sudo systemctl status gitdeploy
 
 ---
 
-## â“ FAQ
+## ❓ FAQ
 
 ### General
 
-**Q: Is gitdeploy free?**
+**Q: Is GitDeploy free?**
 
-A: Yes! gitdeploy is completely free and open-source.
+A: Yes! GitDeploy is completely free and open-source.
 
 ---
 
@@ -877,7 +877,7 @@ A: Yes! `cat ~/.gitdeploy/sync.log` or `tail -f ~/.gitdeploy/sync.log` for real-
 
 ---
 
-**Q: How do I update gitdeploy?**
+**Q: How do I update GitDeploy?**
 
 A: `cd gitdeploy && git pull && npm install`
 
@@ -905,57 +905,57 @@ A: Node.js 14.0.0 or higher. Recommended: Node.js 18.x LTS.
 
 **Q: Can I contribute?**
 
-A: Yes! gitdeploy is open-source. Fork it, make improvements, submit a PR!
+A: Yes! GitDeploy is open-source. Fork it, make improvements, submit a PR!
 
 ---
 
-## ðŸŽ‰ You're All Set!
+## 🎉 You're All Set!
 
 **Quick recap:**
 
-1. âœ… Installed gitdeploy: `npm install`
-2. âœ… Ran setup wizard: `npm start`
-3. âœ… Deployed to VPS
-4. âœ… Started auto-sync: `node src/daemon.js start`
+1. ✅ Installed GitDeploy: `npm install`
+2. ✅ Ran setup wizard: `npm start`
+3. ✅ Deployed to VPS
+4. ✅ Started auto-sync: `node src/daemon.js start`
 
 **Your repositories will now automatically sync and deploy!**
 
 ### What Happens Next?
 
 1. You push code to GitHub
-2. gitdeploy detects the update (every X minutes)
+2. GitDeploy detects the update (every X minutes)
 3. Automatically pulls the latest code
 4. Your VPS has the latest version
 5. Your app/site is updated
 
-**All without you doing anything!** ðŸŽŠ
+**All without you doing anything!** 🎊
 
 ---
 
-## ðŸ“š Additional Information
+## 📚 Additional Information
 
 ### Project Structure
 
 ```
 gitdeploy/
-â”œâ”€â”€ bin/
-â”‚   â””â”€â”€ cli.js              # Main CLI entry
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ config-manager.js   # Configuration
-â”‚   â”œâ”€â”€ github-auth.js      # GitHub API
-â”‚   â”œâ”€â”€ sync-engine.js      # Git operations
-â”‚   â”œâ”€â”€ deployment-manager.js # Deployments
-â”‚   â”œâ”€â”€ setup-wizard.js     # Setup wizard
-â”‚   â”œâ”€â”€ command-handler.js  # CLI commands
-â”‚   â”œâ”€â”€ sync-scheduler.js   # Auto-sync
-â”‚   â””â”€â”€ daemon.js           # Background service
-â”œâ”€â”€ deployments/            # Deployment scripts
-â”‚   â”œâ”€â”€ nodejs-nginx-setup.sh
-â”‚   â”œâ”€â”€ nodejs-pm2-setup.sh
-â”‚   â”œâ”€â”€ python-flask-setup.sh
-â”‚   â”œâ”€â”€ static-apache-setup.sh
-â”‚   â””â”€â”€ static-nginx-setup.sh
-â””â”€â”€ package.json            # Dependencies
+├── bin/
+│   └── cli.js              # Main CLI entry
+├── src/
+│   ├── config-manager.js   # Configuration
+│   ├── github-auth.js      # GitHub API
+│   ├── sync-engine.js      # Git operations
+│   ├── deployment-manager.js # Deployments
+│   ├── setup-wizard.js     # Setup wizard
+│   ├── command-handler.js  # CLI commands
+│   ├── sync-scheduler.js   # Auto-sync
+│   └── daemon.js           # Background service
+├── deployments/            # Deployment scripts
+│   ├── nodejs-nginx-setup.sh
+│   ├── nodejs-pm2-setup.sh
+│   ├── python-flask-setup.sh
+│   ├── static-apache-setup.sh
+│   └── static-nginx-setup.sh
+└── package.json            # Dependencies
 ```
 
 ### Configuration File Location
@@ -970,24 +970,24 @@ gitdeploy/
 
 ---
 
-## ðŸ“„ License
+## 📄 License
 
 MIT License
 
 ---
 
-## ðŸŒŸ Support
+## 🌟 Support
 
-If you find gitdeploy useful:
-- â­ Star the repo on GitHub
-- ðŸ› Report issues
-- ðŸ’¡ Suggest features
-- ðŸ¤ Contribute code
+If you find GitDeploy useful:
+- ⭐ Star the repo on GitHub
+- 🐛 Report issues
+- 💡 Suggest features
+- 🤝 Contribute code
 
 ---
 
-**Happy deploying! ðŸš€**
+**Happy deploying! 🚀**
 
-Made with â¤ï¸ for developers who want simple, automated deployments.
+Made with ❤️ for developers who want simple, automated deployments.
 
 
